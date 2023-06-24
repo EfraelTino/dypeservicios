@@ -1,0 +1,5 @@
+$(function() {
+		$('#main-menu').smartmenus({
+			
+		});
+	});
