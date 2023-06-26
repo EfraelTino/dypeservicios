@@ -15,7 +15,9 @@
 	--transition300: all 300ms;
 }
 
-
+html{
+	scroll-behavior: smooth;
+}
 * {
 	box-sizing: border-box;
 	text-decoration: none;
@@ -37,8 +39,15 @@ body {
 	font-weight: 300;
 	line-height: 1.2;
 }
-
-
+body::-webkit-scrollbar {
+	width: 10px;
+	background-color: var(--color-light1);
+	border-radius: 20px;
+  }
+  body::-webkit-scrollbar-thumb {
+	background-color: var(--color-secundario);
+	border-radius: 20px;
+  }
 
 
 
@@ -51,11 +60,10 @@ body {
 
 .header-fixed {
 	width: 100%;
-	background-color: var(--color-white);
+	background-color: var(--color-secundario);
 	padding: 18px 0px;
 	position: relative;
 	z-index: 1;
-
 	-webkit-transition: top .7s;
 	transition: top .7s;
 }
@@ -71,6 +79,10 @@ body {
 	display: flex;
 	align-items: center;
 	transition: var(--transition150);
+}
+
+.header-left .ico-chdr {
+	color: var(--color-light1);
 }
 
 .header-right {
@@ -120,12 +132,7 @@ body {
 .cart-header {
 	display: flex;
 	margin: 0px 0px 0px 20px;
-	color: var(--color-secundario);
 	transition: var(--transition150);
-}
-
-.cart-header:hover {
-	color: black;
 }
 
 .ico-crtsh {
@@ -147,7 +154,7 @@ body {
 
 /*HEADER PEGADIZO*/
 body.fixed .header-fixed {
-	background-color: var(--color-white);
+	color: var(--color-light1);
 	position: fixed;
 	top: 0;
 	padding: 10px 0px;
@@ -162,7 +169,7 @@ body.fixed .benjipetshop {
 
 body.fixed .ico-chdr {
 	font-size: 20px;
-	color: var(--color-secundario);
+	color: var(--color-light1);
 	margin: 0px 20px;
 	transition: var(--transition150);
 }
@@ -242,15 +249,17 @@ h1 {
 	border-radius: 5px;
 	background: rgba(255, 210, 13, .9);
 	cursor: pointer;
-	-webkit-box-shadow: -2px 3px 7px 0px rgb(255, 215, 71);
-	-moz-box-shadow: 0px 8px 15px -4px rgb(255, 215, 71);
-	box-shadow: 0px 8px 15px -4px rgb(255, 215, 71);
+	-webkit-box-shadow: 0px 2px 10px -3px rgb(255, 215, 71);
+	-moz-box-shadow: 0px 2px 10px -3px rgb(255, 215, 71);
+	box-shadow: 0px 2px 10px -3px rgb(255, 215, 71);
 	transition: var(--transition150);
+	border: 2px solid var(--color-white);
 }
 
 .first-line .adm:hover,
 .second-line .adm:hover {
 	transform: scale(1.05);
+	border: 2px solid var(--color-light2);
 }
 
 
@@ -297,8 +306,7 @@ h1 {
 	width: 39%;
 	margin: 0 0 0 0.5rem;
 	transition: var(--transition150);
-
-	padding: 2em 2em 4em 4em;
+	padding: 1em 1em 3em 3em;
 	background-image: url(images/bg-yellow.webp);
 	background-position: bottom left;
 	background-repeat: no-repeat;
@@ -325,10 +333,20 @@ h1 {
 	display: inline-block;
 	height: auto;
 	max-width: 100%;
-
+	animation: moveImage 2s infinite alternate;
 }
 
-.hogar-text .dyp-desc {
+@keyframes moveImage {
+	0% {
+		transform: translateY(-10px);
+	}
+
+	100% {
+		transform: translateY(20px);
+	}
+}
+
+.img-rom .hogar-text .dyp-desc {
 	color: var(--color-light1);
 	font-size: 40px;
 	transition: var(--transition150);
@@ -392,7 +410,7 @@ h1 {
 	font-size: 1.2rem;
 }
 
-.frecuentes-contenido span {
+.frecuentes-contenido .dow-co {
 	font-size: 2.5rem;
 }
 
@@ -446,34 +464,37 @@ h1 {
 	border-radius: 30px;
 }
 
-.wrap-registro .item-footer .bt-link1{
+.wrap-registro .item-footer .bt-link1 {
 	width: 100%;
 	display: flex;
 	justify-content: center;
 	margin-top: -24px;
 	font-size: 16px;
 }
-.wrap-registro .item-footer .wrap-suscrib{
-	display: flex;
-    justify-content: center;
-    width: 100%;
-    align-items: center;
-    margin: 20px 0px;
 
-    gap: 6rem;
+.wrap-registro .item-footer .wrap-suscrib {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	align-items: center;
+	margin: 20px 0px;
+
+	gap: 6rem;
 }
-.wrap-registro .item-footer .wrap-suscrib .suscrib{
+
+.wrap-registro .item-footer .wrap-suscrib .suscrib {
 	width: 40%;
 	font-size: 20px;
 	padding: 10px 10px 10px 10px;
 }
-.wrap-registro .item-footer .wrap-suscrib .bt-sendmail{
+
+.wrap-registro .item-footer .wrap-suscrib .bt-sendmail {
 	margin: 0;
 	width: 20%;
 	font-size: 20px;
 }
 
-.wrap-registro .item-footer .wrap-suscrib .bt-sendmail span{
+.wrap-registro .item-footer .wrap-suscrib .bt-sendmail span {
 	color: var(--color-light2);
 }
 
@@ -676,23 +697,25 @@ h1 {
 }
 
 .img-footer {
-	margin:100px 0px 0px 0px;
+	margin: 100px 0px 0px 0px;
 	width: 100%;
 	background-size: 100%;
 	background-position: top;
 	position: relative;
 	transition: var(--transition150);
 }
-.footer-form{
+
+.footer-form {
 	height: 180px;
-    background: white;
-    position: top;
-    position: absolute;
-    top: -90px;
-    width: 100%;
-    border-radius: 50%;
-    z-index: 1;
+	background: white;
+	position: top;
+	position: absolute;
+	top: -90px;
+	width: 100%;
+	border-radius: 50%;
+	z-index: 1;
 }
+
 .wrap-footer {
 	display: flex;
 	flex-wrap: wrap;
@@ -868,7 +891,8 @@ h1 {
 	transition: var(--transition150);
 	background-color: var(--color-light2);
 	display: flex;
-	justify-content: center;align-items: center;
+	justify-content: center;
+	align-items: center;
 }
 
 .benji-iso {
@@ -2075,28 +2099,171 @@ h1 {
 	transform: scale(1.03);
 }
 
+.cart-header .ico-crtsh {
+	background-color: var(--color-light1);
+	color: var(--color-primario);
+	border-radius: 50%;
+	padding: 5px;
+
+}
 
 
+/* nostros */
+.bg-principal-nosotros {
+	background-image: url(images/img_3.png);
+	width: 100%;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+}
 
+.bg-principal-nosotros .fondo-color {
+	width: 100%;
+	height: 100%;
+	padding: 160px 0px;
+	background-color: rgba(0, 0, 0, 0.7);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
+.texto-desarrollo {
+	color: white;
+	font-size: 45px;
+	text-align: center;
+	width: 750px;
+}
 
+.img-frecuente {
+	width: 39%;
+	padding-top: 2rem;
+}
 
+.texto-nosotros-title {
+	color: var(--color-primario);
+	font-size: 45px;
+	margin: 3rem 0rem 2rem 0rem;
+	text-align: center;
+}
 
+.wrap-somos {
+	display: flex;
+	justify-content: space-between;
+	gap: 2rem;
+	width: 100%;
+	margin: 1rem 0rem 4rem 0rem;
+}
 
+.somos-img {
+	width: 45%;
+}
 
+.somos-section {
+	width: 63%;
+}
 
+.title-somos {
+	font-size: 2rem;
+}
 
+.title-somos strong {
+	font-size: 3.5rem;
+	color: var(--color-light1);
+	text-shadow: 1px 1px 1px var(--color-secundario);
+}
 
+.somos-text {
+	font-size: 1.5rem;
+	text-align: justify;
+}
 
+.wrap-areas {
+	display: grid;
+	justify-items: center;
+	grid-template: repeat(1, 2fr)/repeat(3, 1fr);
+	gap: 3%;
+}
 
+.bg-area {
+	background-image: url(images/agente.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 334px;
+	width: 100%;
+	border-radius: 20px;
+}
 
+.bg-sobre {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(145deg, rgba(12, 12, 12, 1), rgba(22, 21, 21, 1), rgba(0, 0, 0, .8), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, .8), rgba(18, 18, 18, 1), rgba(12, 12, 12, 1));
+	background-size: 450% 450%;
+	animation: BackgroundGradient 5s ease infinite;
+	transition: var(--transition150);
+	border-radius: 20px;
+}
 
+@keyframes BackgroundGradient {
+	0% {
+		background-position: 0% 50%;
+	}
 
+	50% {
+		background-position: 100% 50%;
+	}
 
+	100% {
+		background-position: 0% 50%;
+	}
+}
 
+.text-area {
+	color: var(--color-white);
+	font-weight: 400;
+	font-size: 2rem;
+}
 
-
-
+/* contactos */
+.escribenos {
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.contacto1 {
+    width: 100%;
+    margin: 5px 0px 5px 0px;
+}
+.mapa-contact {
+    width: 60%;
+    height: 400px;
+    background-color: gray;
+}
+#frmContacto {
+    width: 38%;
+}
+.contacto1-a {
+    font-size: 16px;
+    font-weight: lighter;
+    width: 100%;
+    border: 1px solid var(--color-primario);
+    box-sizing: border-box;
+    padding: 10px 15px;
+    border-radius: 4px;
+}
+.bt2 {
+    background-color: #349A00;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 7px 30px;
+    border-radius: 40px;
+}
 
 @media screen and (max-width: 1400px) {
 	.cl-normal {
@@ -2106,7 +2273,7 @@ h1 {
 
 	.header-fixed {
 		width: 100%;
-		background-color: var(--color-white);
+		background-color: var(--color-primario);
 		padding: 14px 0px;
 
 		-webkit-transition: top .7s;
@@ -2119,7 +2286,7 @@ h1 {
 
 	.ico-chdr {
 		font-size: 20px;
-		color: var(--color-secundario);
+		color: var(--color-light1);
 		margin: 0px 10px;
 	}
 
@@ -2252,14 +2419,20 @@ h1 {
 		background-size: 100%;
 		background-position: top;
 	}
-	.wrap-hogar{
+
+	.wrap-hogar {
 		display: block;
 	}
-	.hogar-text{
+
+	.hogar-text {
 		width: 100%;
 	}
-	.hogar-img{
+
+	.hogar-img {
 		display: none;
+	}
+	.servicios-img{
+		display: flex;
 	}
 }
 
@@ -2320,18 +2493,8 @@ h1 {
 
 
 
-	body.fixed .header-fixed {
-		backdrop-filter: blur(20px);
-		position: inherit;
-		top: inherit;
-		border-radius: inherit;
-		padding: inherit;
-		z-index: inherit;
-		transition: inherit;
-	}
-
 	body.fixed .benjipetshop {
-		width: 30px;
+		width: 60px;
 		transition: var(--transition150);
 	}
 
@@ -2419,12 +2582,13 @@ h1 {
 	.cart-header {
 		display: flex;
 		margin: 0px 50px 0px 10px;
-		color: var(--color-secundario);
 		position: relative;
 	}
-
+	.cart-1{
+		margin: 0px 10px 0px 10px;
+	}
 	.cart-header:hover {
-		color: black;
+		color: white;
 	}
 
 	.ico-crtsh {
@@ -2767,8 +2931,47 @@ h1 {
 		box-shadow: 0px 8px 10px -4px rgba(0, 0, 0, .4);
 	}
 
+	/* nosotros */
+	.wrap-somos {
+		display: flex;
+		flex-direction: column;
+	}
 
-
+	.somos-img {
+		order: 2;
+		transition: var(--transition150);
+	}
+	.servicios-img{
+		order: 1;
+	}
+	.section-services{
+		order: 2;
+	}
+	.section-s{
+		order: 2;
+	}
+	/* CONTACTOS */
+	.wrap-interno {
+		width: 600px;
+		margin: auto;
+		text-align: center;
+	}
+	.escribenos {
+		width: 100%;
+		margin: auto;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	.mapa-contact {
+		width: 100%;
+		height: 400px;
+		background-color: gray;
+		margin: 0px 0px 40px 0px;
+	}
+	#frmContacto {
+		width: 100%;
+	}
 }
 
 
@@ -3085,7 +3288,7 @@ h1 {
 
 	.header-fixed {
 		width: 100%;
-		background-color: var(--color-white);
+		background-color: var(--color-primario);
 		padding: 14px 0px;
 
 		-webkit-transition: top .7s;
@@ -3153,53 +3356,105 @@ h1 {
 		justify-content: space-between;
 		transition: var(--transition150);
 	}
-	.wrap-expertos .cl-normal{
+
+	.wrap-expertos .cl-normal {
 		padding: 60px 0;
 		transition: var(--transition300);
 	}
-	.desc-expertos{
+
+	.desc-expertos {
 		font-size: 20px;
 		transition: var(--transition150);
 	}
-	.first-line, .second-line{
+
+	.first-line,
+	.second-line {
 		display: block;
 		transition: var(--transition300);
 	}
-	.first-line .adm, .second-line .adm{
+
+	.first-line .adm,
+	.second-line .adm {
 		margin: 20px 0px;
 	}
-	.first-line .adm .adm-title, .second-line .adm .adm-title{
+
+	.first-line .adm .adm-title,
+	.second-line .adm .adm-title {
 		font-size: 1.5rem;
-		
+
 	}
-	.wrap-frecuentes{
+
+	.wrap-frecuentes {
 		display: block;
 	}
-	.frecuentes-title, .frecuentes-action{
+
+	.frecuentes-title,
+	.frecuentes-action {
 		width: 100%;
 	}
-	.wrap-registro{
+
+	.wrap-registro {
 		padding: 20px 0px;
 	}
+
 	.wrap-registro .item-footer .bt-link1 {
 		text-align: center;
 		margin-top: -14px;
 		font-size: 14px;
 	}
+
 	.wrap-registro .item-footer .wrap-suscrib {
 		display: block;
 	}
+
 	.wrap-registro .item-footer .wrap-suscrib .suscrib {
 		width: -webkit-fill-available;
 		margin: 0px 10px;
 		font-size: 16px;
 	}
+
 	.wrap-registro .item-footer .wrap-suscrib .bt-sendmail {
 		margin: 0;
 		width: -webkit-fill-available;
 		font-size: 16px;
 		margin: 10px 10px;
 	}
+
+	/* nostros */
+	.texto-desarrollo {
+		font-size: 35px;
+		text-align: center;
+		width: 88%;
+	}
+
+	.texto-nosotros-title {
+		font-size: 2rem;
+	}
+
+
+
+	.somos-section,
+	.somos-img {
+		width: 100%;
+	}
+
+	.title-somos {
+		font-size: 1rem;
+	}
+
+	.title-somos strong {
+		font-size: 1.5rem;
+	}
+
+	.wrap-areas {
+		grid-template: repeat(1, 2fr)/repeat(1, 1fr);
+		gap: .5%;
+	}
+
+	.img-frecuente {
+		display: none;
+	}
+
 }
 
 
@@ -3354,7 +3609,7 @@ h1 {
 		background-color: black;
 	}
 
-	.footer-form{
+	.footer-form {
 		height: 100px;
 		top: 45px;
 	}

@@ -23,7 +23,7 @@
 
 				<div class="footer-left-data">
 					<div class="info-footer">
-						<div class="title-info-footer">Contactos</div>
+						<div class="title-info-footer" style="text-align: left;">Contactos</div>
 						<div class="contact-footer">
 							<span class="icon-phone-call ico-fotc"></span>
 							+51 987 989 909
@@ -35,7 +35,7 @@
 					</div>
 
 					<div class="info-footer">
-						<div class="title-info-footer">Visítanos</div>
+						<div class="title-info-footer" style="text-align: left;">Visítanos</div>
 						<div class="contact-footer">
 							<span class="icon-map-pin ico-fotc"></span>
 							Jr. Especificar, <br>Especificar - Lima
@@ -103,7 +103,7 @@
 				<!-- <div class="wrap-card"><img src="images/diners.png" class="img-int" /></div> -->
 			</div>
 
-			<a target="_blank" href="" class="bt-iluxion">Desarrollo <img src="images/monoagency.png" alt="logo-mono" style="width: 70px;"></a>
+			<a target="_blank" href="" class="bt-iluxion">Desarrollo <img src="images/winay.png" alt="logo-mono" style="width: 70px;"></a>
 		</div>
 	</div>
 </div>

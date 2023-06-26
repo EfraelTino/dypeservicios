@@ -1,32 +1,11 @@
-
-
-
-
-
-
-
-
-
-<!-- HEADER -->
-<?php include('page-master/view-carrito.php') ?>
-
-
-
-
-
 <div class="header-fixed">
 	<div class="cl-normal">
 		<div class="wrap-header">
 
 			<div class="header-left">
 				<img src="images/dype.jpg" class="benjipetshop" align="benji pet shop">
-				<!-- <a href="" class="bt-link-header">Perros</a>
-				<a href="" class="bt-link-header">Gatos</a>
-				<a href="" class="bt-link-header">Hamsters</a>
-				<a href="" class="bt-link-header">Promociones</a> -->
 
-
-
+				<span class="icon-chevrons-right ico-chdr"></span>
 				<!-- NAVEGADOR -->
 				<div class="wrap-navint">
 					<?php include('page-master/navegador.php') ?>
@@ -35,10 +14,12 @@
 
 
 			<div class="header-right">
-			<a href="#view-cart" class="cart-header">
-					<span class="icon-facebook ico-crtsh"></span> 
+				<a href="https://www.facebook.com/Agencia.inmobiliaria14?mibextid=LQQJ4d" class="cart-header cart-1">
+					<span class="icon-facebook ico-crtsh"></span>
 				</a>
-
+				<a href="https://wa.me/message/OG54UUQRCNCFN1 " class="cart-header ">
+					<span class="icon-whatsapp ico-crtsh"></span>
+				</a>
 				<!-- <a href="" class="icon-menu ico-menaso"></a> -->
 			</div>
 
@@ -98,10 +79,3 @@
 	</div>
 
 </div>
-
-
-
-
-
-
-

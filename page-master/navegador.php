@@ -4,8 +4,8 @@
   <input id="main-menu-state" type="checkbox" />
 
 
-  <label class="main-menu-btn" for="main-menu-state">
-    <span class="main-menu-btn-icon"></span>
+  <label class="main-menu-btn" for="main-menu-state" onclick="verModal();" >
+    <span class="main-menu-btn-icon" id="label-burguer"></span>
   </label>
 
 
@@ -17,14 +17,14 @@
   <ul id="main-menu" class="sm sm-simple">
 
 
-    <li><a href="">Inicio</a>
+    <li><a href="index">Inicio</a>
     </li>
 
 
 
 
 
-    <li><a href="">Nosotros</a>
+    <li><a href="./nosotros">Nosotros</a>
     </li>
 
 
@@ -32,7 +32,7 @@
 
 
     <li class="lista-servicios">
-      <a href="">Servicios</a>
+      <a href="./servicios">Servicios</a>
       <ul class="services">
         <li><a href="">Alimentos</a></li>
         <li><a href="">Jueguetes</a></li>
@@ -42,9 +42,13 @@
 
 
 
-    <li><a href="">Únete a Nosotros</a></li>
-    <li><a href="">Contáctanos</a></li>
+    <li><a href="./unete">Únete a Nosotros</a></li>
+    <li><a href="./contactos">Contáctanos</a></li>
     <li><a href="">Innovaciones</a></li>
 
   </ul>
+
 </nav>
+<?php 
+include "navegador-fix.php"
+?>

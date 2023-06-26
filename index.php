@@ -31,18 +31,66 @@
 
     <div class="slider" id="slider1">
         <!-- Slides -->
-        <div style="background-image:url(images/img_1.png)"><a href="" class="linkslider"></a></div>
-        <div style="background-image:url(images/img_2.jpg)"><a href="" class="linkslider"></a></div>
-        <div style="background-image:url(images/img_3.png)"><a href="" class="linkslider"></a></div>
-        <div style="background-image:url(images/img_1.png)"><a href="" class="linkslider"></a></div>
-
-        <!-- The Arrows -->
-        <i class="left" class="arrows" style="z-index:2; position:absolute;"><svg viewBox="0 0 100 100">
-                <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z"></path>
-            </svg></i>
-        <i class="right" class="arrows" style="z-index:2; position:absolute;"><svg viewBox="0 0 100 100">
-                <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" transform="translate(100, 100) rotate(180) "></path>
-            </svg></i>
+        <div style="background-image:url(images/img_1.png)">
+            <div class="linkslider">
+                <div class="cl-normal">
+                    <div class="slider-container">
+                        <h2><a href="">Administración Innovadora para Proyectos Inmobiliarios</a></h2>
+                        <div>
+                            <p>Administramos de manera innovadora y humana los recursos diarios de mantenimiento y bienestar en la vida de cada una de nuestras familias, buscando ser una de las empresas líderes en innovación y calidad de vida. ¡Conoce más de nuestra familia!</p>
+                        </div>
+                        <div class="link-direct">
+                            <a href="">Ver más <span class="icon-arrow-right"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="background-image:url(images/img_2.jpg)">
+            <div class="linkslider" style="display: block;">
+                <div class="cl-normal" style="display: flex;">
+                    <div class="slider-container">
+                        <h2><a href="">Administración Innovadora para Proyectos Inmobiliarios</a></h2>
+                        <div>
+                            <p>Administramos de manera innovadora y humana los recursos diarios de mantenimiento y bienestar en la vida de cada una de nuestras familias, buscando ser una de las empresas líderes en innovación y calidad de vida. ¡Conoce más de nuestra familia!</p>
+                        </div>
+                        <div class="link-direct">
+                            <a href="">Ver más <span class="icon-arrow-right"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="background-image:url(images/img_3.png)">
+            <div class="linkslider" style="display: block;">
+                <div class="cl-normal" style="display: flex;">
+                    <div class="slider-container">
+                        <h2><a href="">Administración Innovadora para Proyectos Inmobiliarios</a></h2>
+                        <div>
+                            <p>Administramos de manera innovadora y humana los recursos diarios de mantenimiento y bienestar en la vida de cada una de nuestras familias, buscando ser una de las empresas líderes en innovación y calidad de vida. ¡Conoce más de nuestra familia!</p>
+                        </div>
+                        <div class="link-direct">
+                            <a href="">Ver más <span class="icon-arrow-right"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="background-image:url(images/img_1.png)">
+            <div class="linkslider" style="display: block;">
+                <div class="cl-normal" style="display: flex;">
+                    <div class="slider-container">
+                        <h2><a href="">Administración Innovadora para Proyectos Inmobiliarios</a></h2>
+                        <div>
+                            <p>Administramos de manera innovadora y humana los recursos diarios de mantenimiento y bienestar en la vida de cada una de nuestras familias, buscando ser una de las empresas líderes en innovación y calidad de vida. ¡Conoce más de nuestra familia!</p>
+                        </div>
+                        <div class="link-direct">
+                            <a href="">Ver más <span class="icon-arrow-right"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="wrap-expertos">
@@ -152,7 +200,7 @@
                 [
                     'title' => 'Pregunta Frecuente',
                     'descripcion' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quisquam magnam atque corrupti harum modi omnis, cumque, non totam excepturi, asperiores voluptatem. Officia delectus blanditiis optio, magnam maxime harum corporis!'
-                ]   
+                ]
             ];
 
             ?>
@@ -168,7 +216,7 @@
                         <div class="frecuentes-contenido">
                             <a role="button" class="panel-title text-black collapsed" onclick="verCollapse(<?php echo $index; ?>, '<?php echo $collapseId; ?>', '<?php echo $iconId; ?>');">
                                 <h6><?php echo '0' . $pos . '. ' . $item['title'] ?></h6>
-                                <span class="icon-chevron-down" id="<?php echo $iconId; ?>"></span>
+                                <span class="icon-chevron-down dow-co" id="<?php echo $iconId; ?>"></span>
                             </a>
                             <div id="<?php echo $collapseId; ?>" class="panel-collapse">
                                 <div class="panel-body">
@@ -182,12 +230,7 @@
                 ?>
             </div>
             <script>
-                function verCollapse(id, collapseId, iconId) {
-                    var collaId = document.getElementById(collapseId);
-                    var iconDow = document.getElementById(iconId);
-                    collaId.classList.toggle("collapse-show");
-                    iconDow.classList.toggle("icon-chevron-up");
-                }
+
             </script>
         </div>
         <div class="wrap-registro">
@@ -211,7 +254,9 @@
             </div>
 
         </div>
-
+        <!-- <?php
+                include "footerclientes.php";
+                ?> -->
         <!-- <h1>Nuestros <span class="boldh1">CLIENTES</span> </h1> -->
 
         <!-- <div class="tabs">
@@ -246,9 +291,11 @@
 
 
     <!-- SLIDER -->
-    <script src="https://iluxion.pe/test-efrael/benji/js/slider-prefixfree.min.js"></script>
+    <!-- <script src="https://iluxion.pe/test-efrael/benji/js/slider-prefixfree.min.js"></script> -->
     <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script> -->
-    <script src="https://iluxion.pe/test-efrael/benji/js/slider.js"></script>
+    <!-- <script src="https://iluxion.pe/test-efrael/benji/js/slider.js"></script> -->
+    <script src="js/slider-prefixfree.min.js"></script>
+    <script src="js/slider.js"></script>
     <!-- SLIDER -->
 
 </body>

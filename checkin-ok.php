@@ -23,8 +23,6 @@
 <!-- HEADER -->
 <?php include('page-master/header.php') ?>
 
-<br><br><br>
-
 <div class="cl-normal">
     
     <div class="process">Proceso de compra</div>
